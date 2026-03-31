@@ -15,7 +15,7 @@
 **Interpretation of the reasoning pathway shown in the figure:**
 
 - e5 is identified as protected by the pawn on d4
-- Nf5 interacts with the Qf7+ threat to create mating pressure
-- Nf5 supports subsequent Bg2 development
+- Ne5 interacts with the Qf7+ threat to create mating pressure
+- Ne5 supports subsequent Bg2 development
 - After Ne5, the ...Bb7 diagonal no longer attacks the knight
 - The pathway reflects anticipation of the response Qe7
