@@ -6,7 +6,7 @@
 
 ## Example: Reasoning Pathway of a Grandmaster-Level Move in BT4
 
-**FEN:** `1bqk1nr/2p2pb1/p2p3p/1p3P1Q/3P2P1/2N1BN2/PPP5/2KR1B2 w - - 0 1`
+**FEN:** `r1bqk1nr/2p2pb1/p2p3p/1p3P1Q/3P2P1/2N1BN2/PPP5/2KR1B2 w - - 0 1`
 
 <p align="center">
   <img src="figures/superhuman.svg" alt="Reasoning pathway example" width="700" />
@@ -19,3 +19,14 @@
 - Ne5 supports subsequent Bg2 development
 - After Ne5, the ...Bb7 diagonal no longer attacks the knight
 - The pathway reflects anticipation of the response Qe7
+- We find features encoding files where an own rook/queen is blocked by a pawn, but becomes exposed to threaten the opponent king/queen after a diagonal pawn capture. It serves to open up a file for the rook/queen.
+
+
+
+At each layer, we replace the middle residual stream at the token corresponding to a given square with the dataset mean activation, to quantify how much that square matters for the move logit. The result is shown below:
+
+<p align="center">
+  <img src="figures/resid_mid_ablation.png" alt="Middle residual ablation experiment" width="700" />
+</p>
+
+d1 has a large effect on the Ne5 logit in early layers, whereas c3 (knight) has almost no effect across layers. This aligns with the reasoning pathway: the token position for c3 does not play a major role in the logit.
