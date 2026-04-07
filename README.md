@@ -21,12 +21,20 @@
 - The pathway reflects anticipation of the response Qe7
 - We find features encoding files where an own rook/queen is blocked by a pawn, but becomes exposed to threaten the opponent king/queen after a diagonal pawn capture. It serves to open up a file for the rook/queen.
 
+**Experiment**
 
-
-At each layer, we replace the middle residual stream at the token corresponding to a given square with the dataset mean activation, to quantify how much that square matters for the move logit. The result is shown below:
+For each layer, we replace the middle residual stream at the token position corresponding to a given square with the dataset mean activation, to measure how strongly that square affects the move logit. The result is shown below:
 
 <p align="center">
-  <img src="figures/resid_mid_ablation.png" alt="Middle residual ablation experiment" width="700" />
+  <img src="figures/resid_mid_ablation.png" alt="Middle residual ablation experiment" width="800" />
 </p>
 
-d1 has a large effect on the Ne5 logit in early layers, whereas c3 (knight) has almost no effect across layers. This aligns with the reasoning pathway: the token position for c3 does not play a major role in the logit.
+Squares such as f3 (source square), e5 (target square), and h5 (queen) have a large effect on the logit of Ne5 in early layers, whereas c3 (knight) has almost no effect across layers. This is consistent with the reasoning pathway: the token position for c3 does not play a major role in determining the logit.
+
+## Human interpretability evaluation
+
+We use three human annotators to label our features for activation consistency and complexity, as shown below.
+
+<p align="center">
+  <img src="figures/annotation.png" alt="Human annotation interface" width="900" />
+</p>
