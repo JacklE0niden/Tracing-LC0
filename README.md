@@ -19,7 +19,7 @@
 - Ne5 supports subsequent Bg2 development
 - After Ne5, the ...Bb7 diagonal no longer attacks the knight
 - The pathway reflects anticipation of the response Qe7
-- We find features encoding files where an own rook/queen is blocked by a pawn, but becomes exposed to threaten the opponent king/queen after a diagonal pawn capture. It serves to open up a file for the rook/queen.
+- We find features encoding files where an own rook/queen is blocked by a pawn, but becomes exposed to threaten the opponent king/queen after a diagonal pawn capture. They serve to open up a file for the rook/queen.
 
 **Experiment**
 
